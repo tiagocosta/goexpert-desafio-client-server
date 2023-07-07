@@ -48,38 +48,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/cotacao", CotacaoHandler)
 	http.ListenAndServe(":8080", mux)
-
-	// var version string
-	// err = db.QueryRow("SELECT SQLITE_VERSION()").Scan(&version)
-
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// fmt.Println(version)
-
-	// rows, err := db.Query("SELECT * FROM cars")
-
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// defer rows.Close()
-
-	// for rows.Next() {
-
-	// 	var id int
-	// 	var name string
-	// 	var price int
-
-	// 	err = rows.Scan(&id, &name, &price)
-
-	// 	if err != nil {
-	// 		log.Fatal(err)
-	// 	}
-
-	// 	fmt.Printf("%d %s %d\n", id, name, price)
-	// }
 }
 
 func CotacaoHandler(w http.ResponseWriter, r *http.Request) {
